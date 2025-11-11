@@ -1,149 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zakia - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2f3e6a2a37.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Zakia</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container inner">
+      <div class="brand"></div>
+      <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i> Menu</button>
+      <ul id="navLinks">
+        <li><a href="#about" class="navlink">About</a></li>
+        <li><a href="#skills" class="navlink">Skills</a></li>
+        <li><a href="#experience" class="navlink">Experience</a></li>
+        <li><a href="#projects" class="navlink">Projects</a></li>
+        <li><a href="#blog" class="navlink">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Zakia</span></h1>
-                <p class="hero-subtitle">Computer Science Student & Aspiring Developer</p>
-                <p class="hero-description">
-                    Passionate about technology and eager to learn new skills. 
-                    Currently studying Computer Science and building projects to expand my knowledge.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
+  <main class="container">
+    <!-- ABOUT  -->
+    <section id="about" class="hero">
+      <div>
+        <span class="badge"><i class="fa-solid fa-code"></i> Full Stack Developer • ML Researcher</span>
+        <h1>Hi, I’m <span style="color:var(--accent)">Zakia</span>.</h1>
+        <p class="lead">I build fast, accessible web apps and research practical AI. I love turning messy data into clear product decisions. MSc in Software, Web & Cloud (Tampere). 4+ years building for the web.</p>
+        <div class="tabs">
+          <div class="tab-list">
+            <button class="tab-btn active" data-tab="edu">Education</button>
+            <button class="tab-btn" data-tab="pubs">Publications</button>
+            <button class="tab-btn" data-tab="certs">Certifications</button>
+            <button class="tab-btn" data-tab="awards">Awards</button>
+          </div>
+          <div id="edu" class="tab-panel active">
+            <div class="item"><strong>The University of Texas at El Paso</strong> — Master of Science in Computer Science</div>
+            <div class="item"><strong>Military Institute of Science and Technology</strong> — Bachelor of Science in Computer Science and Engineering</div>
+          </div>
+          <div id="certs" class="tab-panel">
+            <div class="item">AWS Cloud Practitioner (in progress)</div>
+          </div>
+
+          <div id="pubs" class="tab-panel">
+            <div class="pub-card">
+              <div class="pub-info">
+                <h3>Machine Learning Models for Creep Rupture Prediction of Inconel 617</h3>
+                <p>Journal of Pressure Vessel Technology • 2025 </p>
+              </div>
+              <a href="https://asmedigitalcollection.asme.org/pressurevesseltech/article-abstract/147/4/041501/1213644/Machine-Learning-Models-for-Creep-Rupture" target="_blank" class="pub-link">
+                View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
+            <div class="pub-card">
+              <div class="pub-info">
+                <h3>A Hybrid Stacked Ensemble Learning Framework Using a Time-Temperature Parameter Metamodel for Improved Creep Rupture Prediction</h3>
+                <p>ASME Turbo Expo • 2025 </p>
+              </div>
+              <a href="https://asmedigitalcollection.asme.org/PVP/proceedings-abstract/PVP2024/88506/1209590" target="_blank" class="pub-link">
+                View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+            <div class="pub-card">
+              <div class="pub-info">
+                <h3>Creep-Rupture Prediction of Inconel 617 Using a Python-Based Machine-Learning Approach</h3>
+                <p>Pressure Vessels and Piping Conference (PVP) • 2024 </p>
+              </div>
+              <a href="https://asmedigitalcollection.asme.org/PVP/proceedings-abstract/PVP2024/88506/1209590" target="_blank" class="pub-link">
+                View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          
+          </div>
+          
+          <div id="awards" class="tab-panel">
+            <div class="item"> CRA-W Grad Cohort Recipient, Washington D.C. (2017)</div>
+            <div class="item"> Commandants List Award (2012) </div>
+          </div>
         </div>
+      </div>
+      <div class="card">
+        <img class="portrait" src="zakia.jpg" alt="Portrait placeholder"/>
+        <p style="color:var(--muted);margin-top:8px">Adjunct Professor at Angelo State University • Currently open to Data/AI roles • Based in TX • Remote friendly</p>
+        <ul class="social-icon">
+            <li>
+                <a href="https://scholar.google.com/citations?user=807kRfcAAAAJ&hl=en" target="_blank">
+                    <i class="fa fa-graduation-cap big-icon"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/zakia16" target="_blank">
+                    <i class="fab fa-github big-icon"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/zakia-al-kadri-41367811a/" target="_blank">
+                    <i class="fab fa-linkedin big-icon"></i>
+                </a>
+            </li>
+        </ul>
+       </div>
+      
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a Computer Science student with a passion for programming and technology. 
-                        I enjoy learning new languages and frameworks, and I'm always excited to 
-                        work on projects that challenge me to grow as a developer.
-                    </p>
-                    <p>
-                        When I'm not coding, you can find me exploring new technologies, 
-                        reading about software development, or working on personal projects 
-                        that interest me.
-                    </p>
-                </div>
-                <div class="skills">
-                    <h3>Skills & Technologies</h3>
-                    <div class="skills-grid">
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Problem Solving</span>
-                    </div>
-                </div>
-            </div>
+
+    <!----------------- SKILLS ------------------->
+    <section id="skills" class="skills-section">
+    <section class="tech-stack">
+      <h2>Skills & Expertise</h2>
+    
+      <div class="stack-group">
+        <h3>Programming Languages</h3>
+        <p>Python, Java, PHP, JavaScript, TypeScript, Node.js, C, C++, HTML, CSS (Bootstrap)</p>
+      </div>
+    
+      <div class="stack-group">
+        <h3>Databases & Visualization</h3>
+        <p>MySQL, PostgreSQL, SQLite, Oracle 11g, Firebase, MongoDB, Tableau, Power BI, Mode</p>
+      </div>
+    
+      <div class="stack-group">
+        <h3>AI / ML & Big Data</h3>
+        <p>PyTorch, TensorFlow, NumPy, Pandas, Databricks, Apache Spark SQL, Hadoop (Hive, Impala, Hue, HDFS, Avro, Parquet, Sqoop, Kudu)</p>
+      </div>
+    
+      <div class="stack-group">
+        <h3>Cloud & Data Engineering</h3>
+        <p>AWS (S3, EC2), CI/CD (Jenkins), REST APIs, JSON, VMware</p>
+      </div>
+    
+      <div class="stack-group">
+        <h3>Tools & Platforms</h3>
+        <p>Linux, Unix, Ubuntu, SSH, FTP, Git, Excel, MATLAB, Jupyter Notebook, Postman, Visual Studio, Vercel, JIRA</p>
+      </div>
+    
+      <div class="stack-group">
+        <h3>Competencies</h3>
+        <p>Full Stack Development, Distributed Processing, OOP, Deep Learning, Linear Optimization, AI/ML</p>
+      </div>
+    </section>
+  </section>
+    
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="t">
+          <h3>AI/LLM Trainer • Outlier.ai <span class="tag">2024–2025</span></h3>
+          <p>Evaluated and improved large language model outputs; designed prompts, tools, and QA processes.</p>
         </div>
+        <div class="t">
+          <h3>Lecturer • Angelo State University <span class="tag">2024–2025</span></h3>
+          <p>Taught programming and numerical methods; mentored student projects.</p>
+        </div>
+        <div class="t">
+          <h3>Data Architect • ICON plc <span class="tag">2022–2023</span></h3>
+          <p>Built analytics platforms and governed data at scale (SQL, Impala, S3).</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Portfolio Website</h3>
-                        <p>A responsive portfolio website built with HTML, CSS, and JavaScript. Features modern design and smooth animations.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Coming Soon</h3>
-                        <p>More exciting projects will be added here as I continue my learning journey!</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">In Progress</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>Banking System Simulator</h3>
+          <p class="meta">Python • OOP • CLI</p>
+          <p>Accounts, transactions, and history per account; robust unit tests.</p>
+          <div>
+            <span class="chip">Python</span><span class="chip">CLI</span><span class="chip">TDD</span>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="#" target="_blank"><i class="fa-brands fa-github"></i> Repo</a>
+            <a class="btn" href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Demo</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>RSA Playground</h3>
+          <p class="meta">Python • Cryptography</p>
+          <p>Interactive notebooks exploring RSA keygen, encryption, and attacks.</p>
+          <div>
+            <span class="chip">Math</span><span class="chip">Security</span>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="#"><i class="fa-brands fa-github"></i> Repo</a>
+            <a class="btn" href="#"><i class="fa-solid fa-book-open"></i> Docs</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Memes Trend Scraper</h3>
+          <p class="meta">Python • Reddit/Twitter</p>
+          <p>Scrapes trending memes for weekly YouTube compilations; auto‑schedules uploads.</p>
+          <div>
+            <span class="chip">Automation</span><span class="chip">APIs</span>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="#"><i class="fa-brands fa-github"></i> Repo</a>
+            <a class="btn" href="#"><i class="fa-solid fa-video"></i> Channel</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p class="contact-text">
-                    I'm always interested in new opportunities and collaborations. 
-                    Feel free to reach out if you'd like to connect!
-                </p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <strong>Email:</strong>
-                        <a href="mailto:your.email@example.com">your.email@example.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>GitHub:</strong>
-                        <a href="https://github.com/zakia16" target="_blank">github.com/zakia16</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- BLOG (placeholder) -->
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>How I Teach Arrays in C++</h3>
+          <p class="meta">Teaching • 6 min read</p>
+          <p>Visual metaphors, stack vs heap, and common pitfalls for beginners.</p>
+          <a class="btn" href="#"><i class="fa-solid fa-book-open"></i> Read</a>
+        </article>
+        <article class="card">
+          <h3>From Data Architect to AI</h3>
+          <p class="meta">Career • 8 min read</p>
+          <p>My 30‑day roadmap for re‑entering the tech market with AI skills.</p>
+          <a class="btn" href="#"><i class="fa-solid fa-book-open"></i> Read</a>
+        </article>
+        <article class="card">
+          <h3>LLM Evaluation: A Practical Guide</h3>
+          <p class="meta">AI • 10 min read</p>
+          <p>Designing prompts, scoring, and supervision to get reliable models.</p>
+          <a class="btn" href="#"><i class="fa-solid fa-book-open"></i> Read</a>
+        </article>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Zakia. All rights reserved.</p>
-        </div>
-    </footer>
+  <footer>
+    <div class="container">© <span id="year"></span> Zakia Al Kadri — Built with HTML/CSS/JS </div>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
